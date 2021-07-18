@@ -1,0 +1,20 @@
+{% extends 'basic_app/base.html' %}
+{% block body_block %}
+
+<div class="container">
+  <div style = 'background:Pink' class="jumbotron">
+    <h1>Principles Of Marketing</h1>
+    <h2>Try to add your questions by clicking below</h2>
+      <a class="btn btn-primary" href="{% url 'basic_app:create' %}">I want to add more questions here</a>
+      <h2>Click on the below questions if you want to update the answer</h2>
+    <ol>
+      {% for school in schools %}
+      <h2><li><a style='color:blue' href="{{school.id}}">{{school.ques}}<br><span style='color:green'>Answer:</span><span style='color:red'> {{school.ans}}</span></a></li></h2>
+      {% endfor %}
+    </ol>
+
+  </div>
+
+</div>
+
+{% endblock %}

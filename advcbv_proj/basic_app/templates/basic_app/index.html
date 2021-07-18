@@ -1,0 +1,14 @@
+{% extends 'basic_app/base.html' %}
+{% block body_block %}
+
+<div class="container">
+  <div class="jumbotron">
+    <h2>Go to your Subject</h2>
+    <p></p>
+    <h1><a class="btn btn-primary" href="{% url 'basic_app:list' %}">Principles of Marketing</a>    <a class="btn btn-primary" href="{% url 'basic_app:list_st' %}">Sustainable Technology</a></h1>
+    <h3>INSTRUCTION: Please remember the background color for your subject to avoid confusions while viewing or uploading the questions</h3>
+  </div>
+
+</div>
+
+{% endblock %}
